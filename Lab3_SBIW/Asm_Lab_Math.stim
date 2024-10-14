@@ -1,0 +1,13 @@
+$log OCR0A
+$log OCR0B
+$log SREG
+$startlog Asm_Lab_Math_log_output.stim
+#6
+OCR0A = 0
+OCR0B = 0
+#8
+OCR0A = 1
+OCR0B = 2
+#8
+$stoplog
+$break
