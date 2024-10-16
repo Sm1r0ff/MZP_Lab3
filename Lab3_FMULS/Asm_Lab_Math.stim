@@ -3,17 +3,17 @@ $log OCR0B
 $log SREG
 $startlog Asm_Lab_Math_log_output.stim
 #6
-OCR0A = 0
-OCR0B = 63
-#8
-OCR0A = 0
-OCR0B = 62
-#8
-OCR0A = 128
-OCR0B = 122
-#8
-OCR0A = 128
+OCR0A = 116
 OCR0B = 0
+#8
+OCR0A = 0
+OCR0B = 0
+#8
+OCR0A = 5
+OCR0B = 128
+#8
+OCR0A = 255
+OCR0B = 127
 #8
 $stoplog
 $break

@@ -16,7 +16,7 @@ loop:
 	in r25, OCR0A
 	in r24, OCR0B
 	;	выполнение операции
-	sbiw r24, 33
+	sbiw r24, 5
 	;	вывод данных из РОН в IO регистр для отображения
 	out	OCR0A, r25
 	out OCR0B, r24 

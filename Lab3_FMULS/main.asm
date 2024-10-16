@@ -1,12 +1,24 @@
-;
-; Lab3_FMULS.asm
-;
-; Created: 10/13/2024 5:41:59 PM
-; Author : Sm1r
-;
+reset:
+	rjmp main
 
+main:
+	;	загрузка значений в регистры
+	ldi r21, 0xFF
+	ldi r20, 0xFF
+	;	вывод данных из РОН в IO регистр для отображения
+	out	OCR0A, r21
+	out OCR0B, r20
 
-; Replace with your application code
-start:
-    inc r16
-    rjmp start
+	nop
+loop:
+	;	ввод данных из IO регистров в РОН для обработки
+	;	так как арифм и логические инструкции работают с РОН
+	in r21, OCR0A
+	in r20, OCR0B
+	;	выполнение операции
+	fmuls r21, r20
+	;	вывод данных из РОН в IO регистр для отображения
+	out	OCR0A, r21
+	out OCR0B, r20 
+
+	rjmp loop	
